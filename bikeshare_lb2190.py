@@ -128,8 +128,14 @@ def load_data(city, month, day):
 
 
 def convert_24hr_12ampm(military_hr):
-    """ Takes a 24 hour military time and converts to 12 hr using am/pm """
-          
+    """
+    Asks user to provide a 24 hour military time format, like 13.  
+	Supports hours input only
+
+    Returns:
+        (str) hr with am/pm specification
+    """         
+	
     if military_hr == 0:
         hour_ampm_str = "12am"
     elif military_hr == 12:
@@ -144,8 +150,15 @@ def convert_24hr_12ampm(military_hr):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
-
+	"""
+    Function to show common rental times.
+	  1. Displays most common month
+	  2. Displays most common day of week
+	  3. Diplays the most common time to start a rental
+	
+	Handles case, when there can be more than 1 common answer; to provide all answers that are equally common
+    """
+	
     print('\nCalculating The Most Frequent Times of Travel...')
     start_time = time.time()
 
@@ -204,8 +217,15 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
-
+	"""
+    Function to show common stations for rentals.
+	  1. Displays most common station people started at
+	  2. Displays most common station people ended at
+	  3. Diplays the most common start and stop combination for rentals
+	
+	Handles case, when there can be more than 1 common answer; to provide all answers that are equally common
+    """
+	
     print('\nCalculating The Most Popular Stations and Trip...')
     start_time = time.time()
 
@@ -239,8 +259,13 @@ def station_stats(df):
 
 
 def convert_seconds_days_hr_min_sec(seconds_duration):
-    """ Takes duration in seconds and converts to string of Days, Hrs, Mins, Seconds """
-          
+    """
+    Asks user to provide seconds to convert into Days, Hrs, Mins, Seconds.  
+
+    Returns:
+        (str) Days x Hrs y Mins z and Seconds was
+	"""         
+         
     days = seconds_duration // (24 * 3600)
     remainder = seconds_duration % (24 * 3600)
     hours = remainder // 3600
@@ -253,8 +278,12 @@ def convert_seconds_days_hr_min_sec(seconds_duration):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
-
+ 	"""
+    Function to show trip rental statistics 
+	  1. Total time bikes were rented
+	  2. Average time a bike was rented
+    """
+	
     print('\nCalculating Trip Duration...')
     start_time = time.time()
 
@@ -275,8 +304,18 @@ def trip_duration_stats(df):
 
 
 def user_stats(df, selected_city):
-    """Displays statistics on bikeshare users."""
-
+ 	"""
+    Function to show statistics on who rented the bikes 
+	  1. Show how many rented via subscription versus one-time rental
+	  2. Show if number of renters that were male versus female
+	  
+	  This data only for Chicago and New York City rentals, data not collected for Wash DC
+	  3. Show number of males vs. female renters
+	  4. Show the oldest, youngest and most common age of renters
+	  
+	Handles case, when there can be more than 1 common answer; to provide all answers that are equally common
+    """
+	
     print('\nCalculating User Stats...')
     start_time = time.time()
 
@@ -285,9 +324,7 @@ def user_stats(df, selected_city):
     print("    Rental type by {} ".format(rental_type))
     
 
-    # TO DO: Display counts of gender
-    # TO DO: Display earliest, most recent, and most common year of birth
-    # gender and year of birth not collected for washington
+    # NOTE Gender and year of birth not collected for washington
     if selected_city != 'washington':  #no user data to analyze for washington
         print('\nAnalysis on user...')
         # TO DO: Display counts of gender
@@ -322,8 +359,11 @@ def user_stats(df, selected_city):
 
     
 def show_raw_data(df):
-    """Displays 20 rows of raw data, based in user desire to see more."""
-
+    """
+    Function to show the raw data based on user selection, 20 rows at a time
+		Provide user option to continue or stop
+    """
+	
     review_data = input('\nWould you like review the raw data 20 at a time? Enter yes or no> ')
     if review_data.lower() == 'yes':
         pd.set_option('display.max_rows', 20)
