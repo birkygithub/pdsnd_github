@@ -322,7 +322,7 @@ def user_stats(df, selected_city):
 
     
 def show_raw_data(df):
-    """Displays 5 rows of raw data, based in user desire to see more."""
+    """Displays 20 rows of raw data, based in user desire to see more."""
 
     review_data = input('\nWould you like review the raw data 20 at a time? Enter yes or no> ')
     if review_data.lower() == 'yes':
