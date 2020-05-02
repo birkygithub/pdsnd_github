@@ -6,7 +6,7 @@ https://github.com/birkygithub/pdsnd_github.git
 
 ### Description
 Bikeshare analyzes data from 3 cities (Chicago, New York City, Washington DC) with bikeshare programs.  Data is from Januanry thru June 2017.  
-Interactive program allow users to select city, month(s), day(s) of week see common usage statistics and raw data.
+Interactive program allow users to select city, month(s), day(s) of week and then see common usage statistics and raw data based on their selection.
 NOTE: project does NOT contain the data files the python program needs to run.
 
 ### Files used
