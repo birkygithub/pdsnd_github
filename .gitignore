@@ -1,0 +1,5 @@
+#Includes files to be ignored/not tracked by git
+# Needs to be at same level/folder where the .git folder is at
+#
+#  Ignore the the .csv data files from being tracked
+*.csv
