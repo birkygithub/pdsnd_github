@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+5/2/2020 for Udacity nanodegree project.
 
-### Project Title
-Replace the Project Title
+### pdsnd_github project
+https://github.com/birkygithub/pdsnd_github.git 
 
 ### Description
-Describe what your project is about and what it does
+Bikeshare analyzes data from 3 cities (Chicago, New York City, Washington DC) with bikeshare programs.  Data is from Januanry thru June 2017.  
+Interactive program allow users to select city, month(s), day(s) of week see common usage statistics and raw data.
+NOTE: project does NOT contain the data files the python program needs to run.
 
 ### Files used
-Include the files used
+bikeshare_lb2190.py
+README.md
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+AT&T leadership for encouraging and support advance degrees with Udacity's Nanodegree program.
 
